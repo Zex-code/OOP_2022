@@ -1,0 +1,31 @@
+import turtle
+
+turtle.speed(0)
+
+x = 0
+y = 0
+Vx = 20.0
+Vy = 40.0
+ay = -10
+ax = -0.01
+dt = 0.1
+
+def foo():
+    global x, y, Vx, Vy, ax
+
+    x += Vx * dt + ax * dt**2 / 2
+    y += Vy * dt + ay * dt**2 / 2
+    Vy += ay * dt
+    Vx += ax * dt
+    if Vx > 0:
+        Vx = max(0, Vx)
+    if y <= 0:
+        y = 0
+        Vy = -Vy * 0.5
+        Vx *= 0.8
+
+    turtle.goto(x, y)
+    turtle.getscreen().ontimer(foo())
+
+foo()
+
