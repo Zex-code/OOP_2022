@@ -1,0 +1,16 @@
+import turtle
+import time
+def foo():
+    for i in range(180):
+        turtle.forward(1)
+        turtle.right(1)
+    for i in range(180):
+        turtle.forward(0.1)
+        turtle.right(1)
+
+turtle.shape('turtle')
+turtle.tracer(2)
+turtle.left(2)
+for i in range(100):
+    foo()
+time.sleep(5)
