@@ -1,0 +1,16 @@
+import turtle
+import time
+turtle.shape('turtle')
+
+for i in range(3, 13):
+    for j in range(i):
+        turtle.forward(30 + i * 10)
+        turtle.left(360/i)
+    turtle.penup()
+    turtle.left(180)
+    turtle.forward(5)
+    turtle.left(90)
+    turtle.forward(i * 4)
+    turtle.left(90)
+    turtle.pendown()
+time.sleep(5)
