@@ -1,0 +1,15 @@
+from random import randint
+import turtle
+
+turtle.tracer(2)
+
+pool = [turtle.Turtle(shape='circle') for i in range(10)]
+for unit in pool:
+    unit.penup()
+    unit.speed(1)
+    unit.goto(randint(-200, 200), randint(-200, 200))
+
+
+for i in range(10000):
+    for unit in pool:
+        unit.goto(randint(-200, 200), randint(-200, 200))
