@@ -1,0 +1,13 @@
+import turtle
+import time
+turtle.tracer(2)
+def foo(n):
+    for i in range(n):
+        turtle.forward(90)
+        turtle.left(180 - 180 / n)
+
+turtle.shape('turtle')
+n = int(input())
+foo(n)
+
+time.sleep(5)
