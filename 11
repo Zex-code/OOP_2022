@@ -1,0 +1,16 @@
+import turtle
+import time
+turtle.shape('turtle')
+turtle.speed(2)
+n = 0
+turtle.left(90)
+turtle.tracer(2)
+for i in range(12):
+    for i in range(360):
+        turtle.forward(1+n)
+        turtle.left(1)
+    for i in range(360):
+        turtle.forward(1+n)
+        turtle.right(1)
+    n += 0.1
+time.sleep(5)
