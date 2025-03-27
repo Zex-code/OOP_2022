@@ -1,0 +1,10 @@
+import turtle
+import time
+turtle.shape('turtle')
+turtle.tracer(2)
+n=0
+for i in range(1000000):
+    turtle.forward(n+0.001)
+    turtle.left(1)
+    n+=0.001
+time.sleep(5)
